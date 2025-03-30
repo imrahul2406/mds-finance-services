@@ -1,0 +1,195 @@
+:root {
+    --primary-text-color: rgb(234, 158, 45);
+    /* Define variable */
+    --text-color: rgb(238, 234, 228);
+    --primary-bg: hsl(207, 57%, 20%);
+    --secondary-bg:  hsl(207, 70%, 24%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+.home-left-section {
+    padding: 5.5rem 5rem 3rem 5rem !important;
+
+    .content-1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        color: var(--primary-text-color);
+        margin-bottom: 2.5rem;
+        font-weight: 800;
+    }
+
+    .content-2,
+    .content-3 {
+        line-height: 2.5rem;
+        font-size: 2rem;
+        color: var(--text-color);
+        margin-bottom: 2.5rem;
+    }
+}
+
+.home-right-section {
+    justify-content: center;
+    /* Centers the image horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    padding: 2rem;
+    /* Prevents overflow */
+    position: relative;
+    min-height: 32rem;
+    display: flex;
+
+    .home-img {
+        height: 100%;
+        width: 100%;
+        /* Ensure it takes full width of parent */
+        max-width: 32rem;
+        /* Prevent it from growing too large */
+        bottom: 0;
+        /* border: 10px solid white;
+                border-bottom: none;
+                border-radius: 10px 10px 0 0; */
+        padding: 2rem;
+        position: absolute;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.btn-outline-primary {
+    color: var(--primary-text-color) !important;
+    /* Text color */
+    border-color: var(--primary-text-color) !important;
+    /* Outline color */
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-text-color) !important;
+    /* Background color on hover */
+    color: white !important;
+    /* Text color on hover */
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content-scroll-animation {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.scroll-animation.visible, 
+.content-scroll-animation.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-us {
+    color: var(--text-color);
+
+    .contact-details{
+        padding: 5.5rem 5rem 3rem 5rem !important;
+
+        .title{
+            font-size: 4rem;
+            color: var(--primary-text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}
+.heading{
+    color: var(--primary-text-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.content{
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 320px){
+    .contact-details .title {
+        font-size: 2rem !important;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .content {
+        font-size: 1.2rem;
+    }    
+
+    .carousel-item img {
+        height: 300px !important;  /* Set a fixed height */
+        object-fit: cover; /* Ensures proper scaling */
+    }
+}
+.about-us{
+    padding: 5rem;
+    text-align: center;
+    line-height: 2.5rem;
+
+}
+.primary-bg{
+    background-color: var(--primary-bg);
+}
+.secondary-bg{
+    background-color: var(--secondary-bg);
+}
+
+.carousel-caption h5 {
+    color:  rgb(255, 153, 0); /* Apply text color */
+    font-weight: 900;
+}
+
+@media (min-width: 1024px) {
+    .carousel-item img {
+        height: 500px; /* Set a fixed height */
+        object-fit: cover; /* Ensures proper scaling */
+    }
+
+    .carousel-caption h5{
+        font-size: 4rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8rem !important;  /* Adjust width */
+        background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */
+    }
+
+    
+    .carousel-caption p {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+}
