@@ -134,7 +134,7 @@ body {
     font-size: 1.5rem;
 }
 
-@media (max-width: 320px){
+@media (max-width: 425px){
     .contact-details .title {
         font-size: 2rem !important;
     }
@@ -149,7 +149,7 @@ body {
     }    
 
     .carousel-item img {
-        height: 300px !important;  /* Set a fixed height */
+        height: 340px !important;  /* Set a fixed height */
         object-fit: cover; /* Ensures proper scaling */
     }
 }
